@@ -1,0 +1,38 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Калькулятор для детей (47 хромосом)")
+	fmt.Println(" Выберите действие  (+,-,*,%,/)")
+
+	var action string
+	fmt.Scan(&action)
+
+	var a float64
+	var b float64
+
+	fmt.Println("Введите первое число: ")
+	fmt.Scan(&a)
+
+	fmt.Println("Введите второе число: ")
+	fmt.Scan(&b)
+
+	switch {
+	case action == "+":
+		fmt.Println(" Сумма чисел = " + fmt.Sprint(a+b))
+
+	case action == "-":
+		fmt.Println(" Разность чисел =  " + fmt.Sprint(a-b))
+
+	case action == "/":
+		fmt.Println(" Частное чисел =  " + fmt.Sprint(a/b))
+
+	case action == "*":
+		fmt.Println(" Произведение чисел равно =  " + fmt.Sprint(a*b))
+
+	}
+	fmt.Scanf(" ")
+}
